@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+doc/
+
+outputs/
+
+.env
+
+lerobot/
+
+grab-the-red-pen-v1*
+
+policies/
