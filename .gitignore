@@ -7,7 +7,7 @@ wheels/
 *.egg-info
 
 # Virtual environments
-.venv
+.venv*
 
 doc/
 
@@ -20,3 +20,4 @@ lerobot/
 grab-the-red-pen-v1*
 
 policies/
+
