@@ -8,6 +8,7 @@ dependencies = [
     "huggingface-hub[cli]>=0.35.3",
     "lerobot",
     "lerobot[smolvla]",
+    "opencv-python>=4.12.0.88",
     "torch>=2.7.1",
 ]
 
