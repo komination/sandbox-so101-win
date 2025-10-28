@@ -11,8 +11,6 @@ wheels/
 
 doc/
 
-outputs/
-
 .env
 
 lerobot/
