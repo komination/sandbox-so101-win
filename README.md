@@ -20,10 +20,10 @@ lerobot-teleoperate `
   --robot.type=so101_follower `
   --robot.port=COM6 `
   --robot.id=my_awesome_follower_arm `
-  --teleop.type=so101_leader \
+  --teleop.type=so101_leader `
   --teleop.port=COM7 `
   --teleop.id=my_awesome_leader_arm  `
-  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}}" `
+  --robot.cameras="{ front: {type: opencv, index_or_path: 1, width: 640, height: 480, fps: 30}}" `
   --display_data=true
 ```
 
@@ -92,4 +92,20 @@ lerobot-train `
   --policy.private=true `
   --policy.repo_id=my-smolvla-policy-v1
 
+
+lerobot-train `
+  --policy.type=groot `
+  --dataset.repo_id=$env:HF_USER/$env:MY_DATASET_NAME `
+  --dataset.root="./$env:MY_DATASET_NAME" `
+  --batch_size=64 `
+  --steps=20000 `
+  --output_dir=outputs/train/gr00t `
+  --job_name=my_groot_training `
+  --policy.device=cuda `
+  --wandb.enable=false `
+  --policy.private=true `
+  --policy.repo_id=my-gr00t-policy-v1 `
+  --save_freq=10 `
+  --log_freq=2 
 ```
+
