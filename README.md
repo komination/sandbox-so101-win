@@ -1,6 +1,8 @@
 
 ```powershell
 lerobot-find-port
+
+lerbot-find-cameras opencv
 ```
 
 ```powershell
