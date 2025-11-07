@@ -66,6 +66,10 @@ lerobot-replay `
 ```
 
 ```powershell
+# シェル変数設定
+$env:HF_USER=""
+$env:MY_DATASET_NAME=""
+
 # act ver.
 lerobot-train `
   --policy.type=act `
