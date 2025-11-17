@@ -25,7 +25,7 @@ lerobot-teleoperate `
   --teleop.type=so101_leader `
   --teleop.port=COM7 `
   --teleop.id=my_awesome_leader_arm  `
-  --robot.cameras="{ front: {type: opencv, index_or_path: 1, width: 640, height: 480, fps: 30}}" `
+  --robot.cameras="{ front: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}, top: {type: opencv, index_or_path: 1, width: 640, height: 480, fps: 30}}" `
   --display_data=true
 ```
 
@@ -115,3 +115,20 @@ lerobot-train `
   --log_freq=2 
 ```
 
+```powershell
+lerobot-record `
+  --robot.type=so101_follower `
+  --robot.port=COM6 `
+  --robot.id=my_awesome_follower_arm `
+  --robot.cameras="{ front: {type: opencv, index_or_path: 1, width: 640, height: 480, fps: 30}, top: {type: opencv, index_or_path: 0, width: 640, height: 480, fps: 30}}" `
+  --dataset.single_task="Grab the red pen and put it in the black box." `
+  --dataset.episode_time_s=1600 `
+  --dataset.num_episodes=3 `
+  --dataset.reset_time_s=10 `
+  --display_data=true `
+  --policy.repo_id=$env:HF_USER/my-gr00t-policy-v1 `
+  --policy.path=$env:HF_USER/my-gr00t-policy-v1 `
+  --dataset.push_to_hub=false `
+  --policy.device=cuda `
+  --dataset.repo_id=$env:HF_USER/eval_$env:MY_DATASET_NAME
+```
