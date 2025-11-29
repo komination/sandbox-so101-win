@@ -16,7 +16,6 @@ dependencies = [
     "flash-attn>=2.8.2",
     "triton-windows>=3.5.0.post21",
     "transformers==4.57.1",
-    "pygame>=2.6.1",
 ]
 
 [tool.uv.sources]
